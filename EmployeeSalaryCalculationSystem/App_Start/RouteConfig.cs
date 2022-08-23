@@ -16,7 +16,7 @@ namespace EmployeeSalaryCalculationSystem
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Salary", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

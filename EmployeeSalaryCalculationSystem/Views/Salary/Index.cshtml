@@ -1,0 +1,31 @@
+﻿@model EmployeeSalaryCalculationSystem.Models.Salary
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employee Salary Calculation System</h2>
+
+<div class="row">
+    @using(Html.BeginForm("/Index", "salary", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="empName">Employee Name:</label>
+            <input type="text" class="form-control" id="empName" name="empName" value="@Model.empName"/>
+        </div>
+        <div class="form-group">
+            <label for="empSal">Employee Salary:</label>
+            <input type="text" class="form-control" id="empSal" name="empSal" value="@Model.empSal" />
+        </div>
+        <div class="form-group">
+            <label for="empTax">Generated Tax:</label>
+            <input type="text" class="form-control" id="empTax" name="empTax" value="@Model.empTax" />
+        </div>
+        <div class="form-group">
+            <label for="empNetPay">Net Pay:</label>
+            <input type="text" class="form-control" id="empNetPay" name="empNetPay" value="@Model.empNetPay" />
+        </div>
+
+        <button type="submit" class="btn btn-info" value="add">Calculate</button>
+    }
+</div>
+
